@@ -33,7 +33,7 @@ const Footer = () => (
             />
           </div>
         </div>
-        <p className="mt-10">浙ICP备2024076862号-2</p>
+        <p className="mt-5">浙ICP备2024076862号-2</p>
       </div>
     </div>
     <div className="mx-auto text-center sm:text-xs mt-6">

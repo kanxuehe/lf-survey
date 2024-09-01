@@ -44,9 +44,9 @@ export function NavBar() {
         <div className="space-y-1 absolute top-0 right-0 bg-purple-site p-2">
           {(isMenuShown
             ? [
-                'rotate-45 translate-y-[13px]',
+                'rotate-45 translate-y-[6.5px]',
                 'opacity-0 h-0',
-                '-rotate-45 translate-y-[-13px]',
+                '-rotate-45 translate-y-[-6.5px]',
               ]
             : ['', '', '']
           ).map((className, index) => (
@@ -80,7 +80,7 @@ export function NavBar() {
               >
                 {label}
               </StyledNavLink>
-              <span className="absolute -bottom-5 md:hidden border-b-2 w-48 left-[calc(50%_-_theme(space.24))]" />
+              <span className="absolute -bottom-5 md:hidden border-b-2 w-64 left-[calc(50%_-_theme(space.32))]" />
             </li>
           ))}
         </ul>

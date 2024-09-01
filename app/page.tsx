@@ -1,4 +1,5 @@
 import { WixMediaImage } from '@app/components/Image/WixMediaImage';
+import Image from 'next/image';
 const serverList = [
   {
     img: '/static/images/home-2.png',
@@ -16,18 +17,21 @@ const serverList = [
     desc: '产品介绍',
   },
 ];
+
 export default function Home() {
   return (
     <div className="mx-auto relative">
       <div className="text-center w-full relative">
-        <div className="absolute top-0 left-0 h-[200px] sm:h-[calc(100%-55px)] w-full bg-black opacity-50"></div>
-        <video autoPlay muted loop className="w-full h-[200px] sm:h-fit">
-          <source
-            src="https://video.wixstatic.com/video/0b340f_b4aaabafff194cf6ac9ee5511f58099d/720p/mp4/file.mp4"
-            type="video/mp4"
+        <div className="z-10 absolute top-0 left-0  h-[calc(100vh-176px)] sm:h-[calc(100vh-148px)] w-full bg-black opacity-50"></div>
+        <div className="w-full h-[calc(100vh-176px)] sm:h-[calc(100vh-148px)]">
+          <WixMediaImage
+            media={'/static/images/bg.png'}
+            objectFit="cover"
+            sizes="50vw"
+            disableZoom={true}
           />
-        </video>
-        <div className="absolute top-[40px] right-[30px] sm:top-2/4 sm:left-2/4 text-white sm:translate-y-[-50%] sm:translate-x-[-50%] font-site">
+        </div>
+        <div className="z-30 absolute top-1/3 right-[30px] sm:top-2/5 sm:left-2/4 text-white sm:translate-y-[-50%] sm:translate-x-[-50%] font-site">
           <h1 className="sm:text-[60px] sm:leading-[60px] mb-4">
             洛锋科技-LFSurvey
           </h1>
@@ -37,7 +41,7 @@ export default function Home() {
             软件开发服务
           </h2>
         </div>
-        <div className="flex flex-col sm:flex-row relative items-center bg-white mt-[-10px] sm:mt-[-55px] mx-auto max-w-xs sm:max-w-4xl border-t-4 border-blue-site font-site">
+        <div className="z-20 flex flex-col sm:flex-row relative items-center bg-white mt-[-10px] sm:mt-[-55px] mx-auto max-w-xs sm:max-w-4xl border-t-4 border-blue-site font-site">
           <h3 className="flex-1 sm:text-xl py-4 px-8 text-center sm:text-left">
             LFSurvey专注研发软件产品，提供问卷调查网站开发和API接入等服务
           </h3>
@@ -84,30 +88,30 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <h2 className="text-3xl sm:text-5xl text-center my-10  sm:mt-20 font-site">
-        合作伙伴
-      </h2>
-      <p className="text-center">LFSurvey海外问卷调查渠道查业务合作伙伴</p>
-      {/* <div
-        // className="flex flex-col sm:flex-row gap-8 sm:justify-between items-center font-site"
-        // className="container mx-auto max-w-screen-6xl overflow-x-auto grid grid-cols-[1fr, 2fr, 1fr] gap-4"
-      >
-        {[...Array(20)].map((_item, index) => {
-          return (
-            // <div className="float-left">
-            <Image
-              className="float-left"
-              src={`/static/images/partner-${index}.png`}
-              alt=""
-              width={200}
-              height={200}
-            />
-            // </div>
-          );
-        })}
-      </div> */}
-      <section className="flex flex-col sm:flex-row sm:mx-20">
-        <h2 className="basis-1/2 text-3xl sm:text-5xl font-site">
+      <section className="sm:my-20">
+        <h2 className="text-3xl sm:text-5xl text-center my-10 font-site">
+          合作伙伴
+        </h2>
+        <p className="text-center text-gray-500">
+          LFSurvey海外问卷调查渠道查业务合作伙伴
+        </p>
+        <div className="columns-3 mx-5 mt-10 sm:columns-6 sm:mx-20 sm:mt-20">
+          {[...Array(20)].map((_item, index) => {
+            return (
+              <Image
+                src={`/static/images/partner-${index}.png`}
+                key={index}
+                alt=""
+                width={0}
+                height={0}
+                style={{ width: '200px', height: 'auto' }}
+              />
+            );
+          })}
+        </div>
+      </section>
+      <section className="flex flex-col sm:flex-row mx-5 sm:mx-20 mt-10">
+        <h2 className="mb-10 sm:mb-0 basis-1/2 text-3xl sm:text-5xl font-site">
           洛锋科技介绍
         </h2>
         <div className="basis-1/2 flex flex-col gap-10">
@@ -126,7 +130,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="h-[424px] sm:m-20 rounded-3xl overflow-hidden">
+      <div className="h-[212px] sm:h-[424px] m-5 sm:m-20 rounded-3xl overflow-hidden">
         <WixMediaImage
           media="/static/images/home-1.png"
           objectFit="cover"
@@ -134,17 +138,17 @@ export default function Home() {
           disableZoom={true}
         />
       </div>
-      <section>
+      <section className="mx-5 sm:mx-20 mt-10">
         <h2 className="text-3xl sm:text-5xl text-center my-10  sm:mt-20 font-site">
           软件开发服务
         </h2>
         <p className="text-center text-gray-500">
           我们是一家软件开发公司，专注研发软件相关产品，拥有多项国家发明专利和软件著作权。
         </p>
-        <ul className="sm:m-20 flex gap-4">
+        <ul className="flex flex-col gap-y-5 gap-x-5 sm:flex-row mt-5 sm:mt-20 ">
           {serverList.map((item) => {
             return (
-              <li className="basis-1/3 ">
+              <li className="sm:basis-1/3" key={item.title}>
                 <div className="h-[280px] rounded-3xl overflow-hidden mb-4">
                   <WixMediaImage
                     media={item.img}
