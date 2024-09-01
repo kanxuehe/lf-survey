@@ -56,7 +56,7 @@ export default function Home() {
 
       <div className="sm:h-[514px] flex pt-10 sm:pt-32 sm:gap-12 flex-col sm:flex-row ">
         <div className="basis-1/3">
-          <div className="h-[370px] relative">
+          <div className="h-[250px] sm:h-[370px] relative">
             <WixMediaImage
               media="static/images/home-5.png"
               objectFit="cover"
