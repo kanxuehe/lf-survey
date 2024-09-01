@@ -4,15 +4,12 @@ const nextConfig = {
   env: {},
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    appDir: true,
-  },
   eslint: {
     dirs: ['app'],
   },
   images: {
     unoptimized: true,
-    domains: ['static.wixstatic.com', 'assets.zyrosite.com'],
+    // domains: ['static.wixstatic.com', 'assets.zyrosite.com'],
     formats: ['image/webp'],
   },
 };

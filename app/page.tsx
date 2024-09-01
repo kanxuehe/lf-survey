@@ -96,7 +96,7 @@ export default function Home() {
           LFSurvey海外问卷调查渠道查业务合作伙伴
         </p>
         <div className="columns-3 mx-5 mt-10 sm:columns-6 sm:mx-20 sm:mt-20">
-          {[...Array(20)].map((_item, index) => {
+          {[...Array(18)].map((_item, index) => {
             return (
               <Image
                 src={`static/images/partner-${index}.png`}
