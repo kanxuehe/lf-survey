@@ -13,6 +13,8 @@ export default function RootLayout({
         <title>
           洛锋科技-问卷调查网站开发与API对接服务 | LFSurvey-洛锋科技
         </title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
           content="洛锋科技是一家专注研发软件产品的软件开发公司，拥有多项国家发明专利和软件著作权，提供问卷调查网站开发，API对接等服务。联系我们：浙江省杭州市滨江区。"
