@@ -13,7 +13,7 @@ export default function Page() {
       <div>
         <div className="w-[320px] h-[320px]">
           <WixMediaImage
-            media="/static/images/QRcode.png"
+            media="static/images/QRcode.png"
             objectFit="cover"
             sizes="20vw"
             disableZoom={true}

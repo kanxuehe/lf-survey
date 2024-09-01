@@ -26,7 +26,7 @@ const Footer = () => (
             </h2>
             <Image
               className="mt-2.5"
-              src="/static/images/QRcode.png"
+              src="static/images/QRcode.png"
               alt="二维码"
               width={140}
               height={140}

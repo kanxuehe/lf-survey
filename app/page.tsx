@@ -2,17 +2,17 @@ import { WixMediaImage } from '@app/components/Image/WixMediaImage';
 import Image from 'next/image';
 const serverList = [
   {
-    img: '/static/images/home-2.png',
+    img: 'static/images/home-2.png',
     title: '问卷调查网站',
     desc: '提供问卷调查网站开发对接，api接入，问卷数据播报机器人服务。',
   },
   {
-    img: '/static/images/home-3.png',
+    img: 'static/images/home-3.png',
     title: '联盟网站后台',
     desc: '提供联盟网站后台开发，api对接等服务，与合作伙伴共同发展业务。',
   },
   {
-    img: '/static/images/home-4.png',
+    img: 'static/images/home-4.png',
     title: '联系我们',
     desc: '产品介绍',
   },
@@ -25,7 +25,7 @@ export default function Home() {
         <div className="z-10 absolute top-0 left-0  h-[calc(100vh-176px)] sm:h-[calc(100vh-148px)] w-full bg-black opacity-50"></div>
         <div className="w-full h-[calc(100vh-176px)] sm:h-[calc(100vh-148px)]">
           <WixMediaImage
-            media={'/static/images/bg.png'}
+            media={'static/images/bg.png'}
             objectFit="cover"
             sizes="50vw"
             disableZoom={true}
@@ -58,7 +58,7 @@ export default function Home() {
         <div className="basis-1/3">
           <div className="h-[370px] relative">
             <WixMediaImage
-              media="https://static.wixstatic.com/media/0b340f_d146a1cff38b4503ae5e6ccc9aa86368~mv2_d_5184_3456_s_4_2.jpg/v1/fill/w_434,h_460,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/0b340f_d146a1cff38b4503ae5e6ccc9aa86368~mv2_d_5184_3456_s_4_2.jpg"
+              media="static/images/home-5.png"
               objectFit="cover"
               sizes="50vw"
               disableZoom={true}
@@ -74,7 +74,7 @@ export default function Home() {
         <div className="basis-2/3">
           <div className="h-[370px] relative">
             <WixMediaImage
-              media="https://static.wixstatic.com/media/0b340f_c407b331d71449afa40b30f6efb200aa~mv2_d_5580_4160_s_4_2.jpg/v1/fill/w_615,h_460,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/0b340f_c407b331d71449afa40b30f6efb200aa~mv2_d_5580_4160_s_4_2.jpg"
+              media="static/images/home-6.png"
               objectFit="cover"
               sizes="100vw"
               disableZoom={true}
@@ -99,7 +99,7 @@ export default function Home() {
           {[...Array(20)].map((_item, index) => {
             return (
               <Image
-                src={`/static/images/partner-${index}.png`}
+                src={`static/images/partner-${index}.png`}
                 key={index}
                 alt=""
                 width={0}
@@ -132,7 +132,7 @@ export default function Home() {
       </section>
       <div className="h-[212px] sm:h-[424px] m-5 sm:m-20 rounded-3xl overflow-hidden">
         <WixMediaImage
-          media="/static/images/home-1.png"
+          media="static/images/home-1.png"
           objectFit="cover"
           sizes="20vw"
           disableZoom={true}

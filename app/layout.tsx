@@ -43,7 +43,7 @@ export default function RootLayout({
           name="keywords"
           content="洛锋科技, 问卷调查网站开发, API对接服务 | LFSurvey-洛锋科技"
         />
-        <link rel="icon" href="/static/images/logo2.png" />
+        <link rel="icon" href="static/images/logo2.png" />
         <link rel="canonical" href="https://lfsurvey.com/" />
       </head>
       <body className="text-blue-site bg-white">
