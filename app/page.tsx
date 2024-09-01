@@ -118,7 +118,7 @@ export default function Home() {
           <p className="text-gray-500">
             洛锋科技_Lfsurvey是一家专注研发软件相关产品的软件开发公司，拥有多项国家发明专利和软件著作权以及商标。我们致力于问卷调查网站后台开发，api对接，联盟网站后台对接。
           </p>
-          <div className="flex gap-10">
+          <div className="flex justify-between">
             <div>
               <p className="text-5xl font-bold text-purple-site mb-2">15000+</p>
               <span>可靠性强</span>
@@ -149,7 +149,7 @@ export default function Home() {
           {serverList.map((item) => {
             return (
               <li className="sm:basis-1/3" key={item.title}>
-                <div className="h-[280px] rounded-3xl overflow-hidden mb-4">
+                <div className="h-[230px] sm:h-[280px] rounded-3xl overflow-hidden mb-4">
                   <WixMediaImage
                     media={item.img}
                     objectFit="cover"
