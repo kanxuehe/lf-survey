@@ -46,7 +46,7 @@ export default function RootLayout({
         <link rel="icon" href="static/images/logo2.png" />
         <link rel="canonical" href="https://lfsurvey.com/" />
       </head>
-      <body className="text-blue-site bg-white">
+      <body className="text-basic bg-white">
         <Header />
         <main className="bg-white">{children}</main>
         <div className="mt-10 sm:mt-20">

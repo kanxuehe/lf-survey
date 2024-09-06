@@ -1,5 +1,6 @@
-import { WixMediaImage } from '@app/components/Image/WixMediaImage';
 import Image from 'next/image';
+import { WixMediaImage } from '@app/components/Image/WixMediaImage';
+import CustomerService from '@app/components/CustomerService';
 const serverList = [
   {
     img: 'static/images/home-2.png',
@@ -21,6 +22,8 @@ const serverList = [
 export default function Home() {
   return (
     <div className="mx-auto relative">
+      <CustomerService />
+      <section className="w-full h-[34vw] bg-[url('/static/images/home/bg1.png')] bg-cover"></section>
       <div className="text-center w-full relative">
         <div className="z-10 absolute top-0 left-0  h-[calc(100vh-176px)] sm:h-[calc(100vh-148px)] w-full bg-black opacity-50"></div>
         <div className="w-full h-[calc(100vh-176px)] sm:h-[calc(100vh-148px)]">

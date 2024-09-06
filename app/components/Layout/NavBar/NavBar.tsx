@@ -37,7 +37,7 @@ export function NavBar() {
   );
   return (
     <>
-      <button
+      {/* <button
         className="block md:hidden float-right relative z-50"
         onClick={toggleOpen}
       >
@@ -59,7 +59,7 @@ export function NavBar() {
             ></span>
           ))}
         </div>
-      </button>
+      </button> */}
       <nav
         className={`${
           isMenuShown

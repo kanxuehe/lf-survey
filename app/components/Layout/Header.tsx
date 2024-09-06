@@ -1,24 +1,15 @@
 import { NavBar } from '@app/components/Layout/NavBar/NavBar';
-import { Logo } from '@app/components/Logo/Logo';
-
+import Logo from '@app/components/Logo';
+import Link from 'next/link';
 const Header = () => (
-  <>
-    <header className="w-full my-6 px-2 sm:px-8">
-      <div className="flex h-header sm:items-center sm:gap-8">
-        <h2 className="flex-1">
-          <a
-            href="/"
-            className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6"
-          >
-            <Logo />
-          </a>
-        </h2>
-        <div>
-          <NavBar />
-        </div>
-      </div>
-    </header>
-  </>
+  <header className="mx-auto flex items-center justify-between sm:w-[1200px] sm:h-[88px]">
+    <h1 className="flex-1">
+      <Link href="/">
+        <Logo />
+      </Link>
+    </h1>
+    <NavBar />
+  </header>
 );
 
 export default Header;
