@@ -15,6 +15,7 @@ module.exports = {
         'purple-site': '#8751BD',
         'blue-site': '#2859B6',
         'text-basic': '#353535',
+        'text-gray': '#e5e5e5',
       },
       keyframes: {
         fade: {

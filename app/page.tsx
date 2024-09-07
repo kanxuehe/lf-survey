@@ -1,30 +1,137 @@
 import Image from 'next/image';
-import { WixMediaImage } from '@app/components/Image/WixMediaImage';
-import CustomerService from '@app/components/CustomerService';
-const serverList = [
+import Title from '@app/components/Title';
+import Link from 'next/link';
+const aboutUs = [
   {
-    img: 'static/images/home-2.png',
-    title: '问卷调查网站',
-    desc: '提供问卷调查网站开发对接，api接入，问卷数据播报机器人服务。',
+    title: '行业经验',
+    number: '10',
+    unit: '年',
   },
   {
-    img: 'static/images/home-3.png',
-    title: '联盟网站后台',
-    desc: '提供联盟网站后台开发，api对接等服务，与合作伙伴共同发展业务。',
+    title: '客户案例实力见证',
+    number: '15000',
+    unit: '+',
   },
   {
-    img: 'static/images/home-4.png',
-    title: '联系我们',
-    desc: '产品介绍',
+    title: '专利技术领先',
+    number: '100',
+    unit: '+',
+  },
+  {
+    title: '合作经销商',
+    number: '88',
+    unit: '+',
+  },
+];
+const products = [
+  {
+    title: '问卷调查网站后台开发',
+    desc: '提供高度定制化的解决方案，\n构建功能丰富、用户友好的在线调查平台\n以及创新的问卷数据播报机器人服务',
+    bg: 'static/images/home/pbg1.png',
+  },
+  {
+    title: 'API对接服务',
+    desc: '擅长各类API接口的设计与实现\n能够为客户提供稳定\n高效的数据交互解决方案',
+    bg: 'static/images/home/pbg2.png',
+  },
+  {
+    title: '联盟网站后台对接',
+    desc: '拥有多项国家专利\n擅长复杂联盟网站后台高效对接\n实现无缝数据共享与互通',
+    bg: 'static/images/home/pbg3.png',
   },
 ];
 
 export default function Home() {
   return (
     <div className="mx-auto relative">
-      <CustomerService />
-      <section className="w-full h-[34vw] bg-[url('/static/images/home/bg1.png')] bg-cover"></section>
-      <div className="text-center w-full relative">
+      <section className="w-full h-[33.85vw] flex items-center justify-center bg-[url('/static/images/home/bg1.png')] bg-cover">
+        <div className="flex flex-col items-center">
+          <h1 className="font-bold text-5xl text-white mb-[56px]">
+            洛锋科技LFSurvey 专注研发软件产品
+          </h1>
+          <p className="text-2xl text-white font-light mb-20 text-center">
+            海外问卷调查渠道查软件开发服务
+            <br />
+            提供问卷调查网站开发和API接入等服务
+          </p>
+          <Link
+            href="/products"
+            className="flex items-center justify-center w-[140px] h-[40px] rounded-full border border-white text-white"
+          >
+            了解更多
+          </Link>
+        </div>
+      </section>
+      <section className="pt-[90px]">
+        <Title enTitle="ABOUT US" title="关于我们" />
+        <p className="mt-[60px] mb-[78px] leading-[36px] text-center font-light">
+          洛锋科技_Lfsurvey，作为业界领先的软件开发企业，专注于软件相关产品的深度研发与创新，以其卓越的技术实力和丰富的行业经验
+          <br />
+          在软件开发领域树立了良好的口碑。公司自成立以来，便不断追求卓越，致力于通过技术革新推动行业发展，已成功获得多项国家发明专利，
+          <br />
+          这些专利的取得不仅是对公司技术实力的肯定，更是对未来技术探索方向的引领。
+        </p>
+        <div className="w-full h-[16vw] flex items-center justify-center bg-[url('/static/images/home/bg2.png')] bg-cover">
+          <ul className="mx-auto sm:w-[1200px] flex justify-between">
+            {aboutUs.map((item) => (
+              <li className="flex flex-col items-center" key={item.title}>
+                <div>
+                  <span className="text-[60px] mr-2">{item.number}</span>
+                  <span className="text-[18px] font-light">{item.unit}</span>
+                </div>
+                <p className="mt-[22px] text-[#999] text-lg">{item.title}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+      <section className="pt-[90px] pb-[100px]">
+        <Title enTitle="PRODUCTS AND SERVICES" title="产品与服务" />
+        <ul className="mx-auto mt-[60px] sm:w-[1200px] flex justify-between gap-x-[30px]">
+          {products.map((item, index) => {
+            return (
+              <li
+                className="relative flex-1 h-[640px] flex flex-col items-center"
+                key={item.title}
+              >
+                <Image
+                  src={item.bg}
+                  alt=""
+                  width={380}
+                  height={640}
+                  style={{ width: '380', height: 'auto' }}
+                />
+                <div className="flex flex-col justify-center bg-[#2859B6] absolute w-full h-60 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <div className="text-white text-center text-2xl font-normal">
+                    {item.title}
+                  </div>
+                  <p className="mt-8 text-white text-base font-light text-center whitespace-pre-line">
+                    {item.desc}
+                  </p>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+      <section className="pt-[64px] pb-[55px] w-full h-[20.2vw] bg-[url('/static/images/home/bg3.png')] bg-contain">
+        <Title enTitle="COOPERATIVE PARTNER" title="合作伙伴" />
+        <ul className="mx-auto mt-[50px] sm:w-[1200px] flex justify-between gap-x-[40px] overflow-x-auto">
+          {[...Array(18)].map((_item, index) => {
+            return (
+              <Image
+                src={`static/images/partner-${index}.png`}
+                key={index}
+                alt=""
+                width={220}
+                height={120}
+                style={{ width: '220px', height: '120px' }}
+              />
+            );
+          })}
+        </ul>
+      </section>
+      {/* <div className="text-center w-full relative">
         <div className="z-10 absolute top-0 left-0  h-[calc(100vh-176px)] sm:h-[calc(100vh-148px)] w-full bg-black opacity-50"></div>
         <div className="w-full h-[calc(100vh-176px)] sm:h-[calc(100vh-148px)]">
           <WixMediaImage
@@ -166,7 +273,7 @@ export default function Home() {
             );
           })}
         </ul>
-      </section>
+      </section> */}
     </div>
   );
 }
