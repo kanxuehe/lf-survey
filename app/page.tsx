@@ -28,16 +28,19 @@ const products = [
     title: '问卷调查网站后台开发',
     desc: '提供高度定制化的解决方案，\n构建功能丰富、用户友好的在线调查平台\n以及创新的问卷数据播报机器人服务',
     bg: 'static/images/home/pbg1.png',
+    mbg: 'static/images/home/m-pbg1.png',
   },
   {
     title: 'API对接服务',
     desc: '擅长各类API接口的设计与实现\n能够为客户提供稳定\n高效的数据交互解决方案',
     bg: 'static/images/home/pbg2.png',
+    mbg: 'static/images/home/m-pbg2.png',
   },
   {
     title: '联盟网站后台对接',
     desc: '拥有多项国家专利\n擅长复杂联盟网站后台高效对接\n实现无缝数据共享与互通',
     bg: 'static/images/home/pbg3.png',
+    mbg: 'static/images/home/m-pbg3.png',
   },
 ];
 
@@ -103,9 +106,16 @@ export default function Home() {
                 <Image
                   src={item.bg}
                   alt=""
-                  width={380}
-                  height={640}
-                  className=" w-[3.2rem] h-auto sm:w-[380px] sm:h-auto"
+                  width={0}
+                  height={0}
+                  className="hidden sm:block w-[3.2rem] h-auto sm:w-[380px] sm:h-auto"
+                />
+                <Image
+                  src={item.mbg}
+                  alt=""
+                  width={0}
+                  height={0}
+                  className="sm:hidden w-[3.2rem] h-auto sm:w-[380px] sm:h-auto"
                 />
                 <div className="flex w-[3.2rem] h-[1.8rem] flex-col justify-center sm:bg-[#2859B6] sm:absolute sm:w-full sm:h-[42.18%] sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2">
                   <div className="text-[0.28rem] text-[#333] sm:text-white sm:text-center sm:text-2xl font-normal">
