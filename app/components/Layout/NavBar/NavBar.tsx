@@ -4,10 +4,10 @@ import { useCallback, useState } from 'react';
 import type { LinkProps } from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const navbarItems = [
-  { ref: '/', label: '首页' },
-  { ref: '/products', label: '产品' },
-  { ref: '/contact', label: '联系我们' },
+export const navbarItems = [
+  { href: '/', label: '首页' },
+  { href: '/products', label: '产品' },
+  { href: '/contact', label: '联系我们' },
 ];
 
 const StyledNavLink = ({
@@ -21,7 +21,7 @@ const StyledNavLink = ({
 }) => (
   <NavLink
     className={`${className ?? ''} ${
-      isActive ? 'text-purple-site' : 'hover:text-purple-site'
+      isActive ? 'text-[#2859B6]' : 'hover:text-[#2859B6]'
     }`}
     {...linkProps}
   />
@@ -37,44 +37,26 @@ export function NavBar() {
   );
   return (
     <>
-      {/* <button
-        className="block md:hidden float-right relative z-50"
-        onClick={toggleOpen}
-      >
-        <div className="space-y-1 absolute top-0 right-0 bg-purple-site p-2">
-          {(isMenuShown
-            ? [
-                'rotate-45 translate-y-[6.5px]',
-                'opacity-0 h-0',
-                '-rotate-45 translate-y-[-6.5px]',
-              ]
-            : ['', '', '']
-          ).map((className, index) => (
-            <span
-              key={index}
-              className={
-                'block h-[2px] w-4 bg-white transform transition duration-500 ease-in-out ' +
-                className
-              }
-            ></span>
-          ))}
-        </div>
-      </button> */}
       <nav
         className={`${
           isMenuShown
             ? 'max-md:w-full max-md:opacity-100'
             : 'max-md:w-0 max-md:opacity-0'
-        } transition-all duration-500 ease-in-out md:block overflow-hidden max-md:absolute max-md:animate-sideways-once max-md:h-screen max-md:bg-white max-md:pt-24 z-40 top-0 right-0`}
+        } h-full  transition-all duration-500 ease-in-out  overflow-hidden max-md:absolute max-md:animate-sideways-once max-md:h-screen max-md:bg-white max-md:pt-24 z-40 top-0 right-0`}
       >
-        <ul className="flex flex-col items-center md:flex-row gap-10 md:gap-4 min-[900px]:gap-5 lg:gap-12 justify-end text-sm md:text-[15px] leading-[22px]">
-          {navbarItems.map(({ ref, label }) => (
-            <li key={ref} className="relative">
+        <ul className="h-full flex flex-col items-center md:flex-row gap-10 min-[900px]:gap-5 justify-end text-sm md:text-[16px] leading-[22px] font-medium">
+          {navbarItems.map(({ href, label }) => (
+            <li
+              key={href}
+              className={`relative flex items-center h-full px-8 ${
+                href === linkRef ? 'border-b-2 border-[#2859B6]' : ''
+              }`}
+            >
               <StyledNavLink
-                isActive={ref === linkRef}
-                href={ref}
+                isActive={href === linkRef}
+                href={href}
                 onClick={() => {
-                  setLinkRef(ref);
+                  setLinkRef(href);
                   setIsMenuShown(false);
                 }}
               >

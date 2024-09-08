@@ -14,6 +14,10 @@ export default function RootLayout({
           洛锋科技-问卷调查网站开发与API对接服务 | LFSurvey-洛锋科技
         </title>
         <meta charSet="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
@@ -48,10 +52,8 @@ export default function RootLayout({
       </head>
       <body className="text-basic bg-white">
         <Header />
-        <main className="bg-white">{children}</main>
-        <div className="mt-10 sm:mt-20">
-          <Footer />
-        </div>
+        <main className="bg-white pb-[0.98rem] sm:pb-0">{children}</main>
+        <Footer />
       </body>
     </html>
   );
