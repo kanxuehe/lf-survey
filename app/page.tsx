@@ -130,10 +130,11 @@ export default function Home() {
                 key={index}
               >
                 <Image
-                  src={`static/images/partner-${index}.png`}
+                  src={`static/images/partner/partner-${index}.png`}
                   alt=""
                   width={0}
                   height={0}
+                  className="object-contain"
                   style={{ width: '90%', height: 'auto' }}
                 />
               </li>

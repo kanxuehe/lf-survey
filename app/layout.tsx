@@ -52,7 +52,9 @@ export default function RootLayout({
       </head>
       <body className="text-basic bg-white">
         <Header />
-        <main className="bg-white pb-[0.98rem] sm:pb-0">{children}</main>
+        <main className="bg-white pb-[0.98rem] sm:pb-0 sm:min-h-[calc(100vh-408px)]">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
