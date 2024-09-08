@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import Title from '@app/components/Title';
 import Link from 'next/link';
+import Title from '@app/components/Title';
+import CustomerService from '@app/components/CustomerService';
 const aboutUs = [
   {
     title: '行业经验',
@@ -47,6 +48,7 @@ const products = [
 export default function Home() {
   return (
     <div className="mx-auto relative">
+      <CustomerService />
       <section className="h-[3.4rem] w-full sm:h-[33.85vw] flex items-center justify-center bg-[url('/static/images/home/bg1.png')] bg-cover bg-no-repeat">
         <div className="flex flex-col items-center">
           <h1 className="text-[0.32rem] leading-[0.32rem] mb-[0.4rem] font-bold text-white sm:text-5xl  sm:mb-[56px]">
