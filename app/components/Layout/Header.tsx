@@ -12,7 +12,7 @@ const Header = () => (
       <NavBar />
     </header>
     <header className="sm:hidden h-[0.8rem] flex items-center justify-center">
-      <h1 className="text-center text-[#333] font-bold text-[0.3rem]">
+      <h1 className="text-center text-[#333] font-bold text-[0.3rem] leading-[0.3rem]">
         洛锋科技-LFSurvey
       </h1>
     </header>
