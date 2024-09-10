@@ -134,11 +134,11 @@ export default function Home() {
       </section>
       <section className="flex flex-col justify-center w-full pb-[0.52rem] sm:pb-0 sm:h-[20.2vw] sm:bg-[url('/static/images/home/bg3.png')] bg-cover">
         <Title enTitle="COOPERATIVE PARTNER" title="合作伙伴" />
-        <ul className="content mt-[0.5rem] gap-[0.35rem] sm:mt-[50px] flex justify-between flex-wrap sm:flex-nowrap sm:gap-x-[40px] sm:overflow-x-auto sm:-mb-5 sm:pb-5 ">
-          {[...Array(18)].map((_item, index) => {
+        <ul className="content mt-[0.5rem] gap-[0.35rem] sm:mt-[50px] flex flex-wrap sm:flex-nowrap sm:gap-x-[40px] sm:overflow-x-auto sm:-mb-5 sm:pb-5 ">
+          {[...Array(14)].map((_item, index) => {
             return (
               <li
-                className="w-[2rem] h-[1.09rem] sm:w-[18.41%] sm:h-[6.3vw] max-w-[221px] max-h-[121px] min-w-[18.41%] min-h-[6.3vw] flex items-center justify-center overflow-hidden bg-white border border-[#D2D2D2]"
+                className="w-[2rem] h-[1.09rem] sm:w-[18.41%] sm:h-[6.3vw] max-w-[221px] max-h-[121px] min-w-[18.41%] min-h-[6.3vw] flex items-center justify-center overflow-hidden bg-white border-y border-[#D2D2D2]"
                 key={index}
               >
                 <Image
@@ -147,7 +147,7 @@ export default function Home() {
                   width={0}
                   height={0}
                   className="object-contain"
-                  style={{ width: '90%', height: 'auto' }}
+                  style={{ width: '100%', height: 'auto' }}
                 />
               </li>
             );
