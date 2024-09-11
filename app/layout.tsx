@@ -1,6 +1,7 @@
 import './globals.css';
 import Footer from '@app/components/Layout/Footer';
 import Header from '@app/components/Layout/Header';
+import CustomerService from '@app/components/CustomerService';
 
 export default function RootLayout({
   children,
@@ -54,6 +55,7 @@ export default function RootLayout({
         <Header />
         <main className="bg-white pb-[0.98rem] sm:pb-0 sm:min-h-[calc(100vh-408px)]">
           {children}
+          <CustomerService />
         </main>
         <Footer />
       </body>

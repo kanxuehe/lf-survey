@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import './footer.css';
 export const navbarItems = [
   { href: '/', label: '首页', icon: 'home' },
   { href: '/products', label: '产品', icon: 'product' },
