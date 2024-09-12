@@ -57,7 +57,7 @@ export default function Page() {
             </div>
             <div>
               <Image
-                src="static/images/home/QRcode1.png"
+                src="static/images/home/QRcode2.png"
                 alt=""
                 width={150}
                 height={150}

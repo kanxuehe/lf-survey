@@ -51,23 +51,30 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <footer className="sm:hidden fixed bottom-0 w-full h-[0.98rem] bg-[#2859B6] flex justify-around items-center">
+      <footer
+        className="sm:hidden fixed bottom-0 w-full h-[0.98rem] bg-white flex justify-around items-center"
+        style={{ boxShadow: '0px -3px 13px 0px rgba(0, 0, 0, 0.1)' }}
+      >
         {navbarItems.map((item) => (
           <Link
             href={item.href}
             key={item.href}
-            className={`flex flex-col justify-center items-center gap-[0.04rem] ${
-              pathname === item.href ? 'opacity-1' : 'opacity-50'
-            }`}
+            className={`flex flex-col justify-center items-center gap-[0.04rem]`}
           >
             <Image
-              src={`static/images/footer/${item.icon}.png`}
+              src={`static/images/footer/${
+                pathname === item.href ? item.icon + '-active' : item.icon
+              }.svg`}
               alt=""
               width={0}
               height={0}
               className="w-[0.48rem] h-[0.48rem]"
             />
-            <div className="text-[0.2rem] text-white leading-[0.2rem]">
+            <div
+              className={`text-[0.2rem] text-[#ccc] leading-[0.3rem] ${
+                pathname === item.href ? 'text-[#F24A35]' : 'text-[#ccc]'
+              }`}
+            >
               {item.label}
             </div>
           </Link>
