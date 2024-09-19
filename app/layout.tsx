@@ -1,3 +1,4 @@
+import OpenAppBtn from '@/components/OpenAppBtn';
 import './globals.css';
 export default function RootLayout({
   children,
@@ -18,6 +19,7 @@ export default function RootLayout({
       </head>
       <body className=" bg-white">
         <main>{children}</main>
+        <OpenAppBtn />
       </body>
     </html>
   );
