@@ -71,10 +71,6 @@
     font-family: Oswald-Medium, Oswald, sans-serif;
   }
 
-  .font-helvetica {
-    font-family: Helvetica-W01-Light, sans-serif;
-  }
-
   .input {
     @apply block;
     @apply w-full;
@@ -99,17 +95,16 @@
 
 html,
 body {
+  font-family: Inter;
   padding: 0;
   margin: 0;
   font: normal normal normal 18px/1.4em avenir-lt-w01_35-light1475496,
     sans-serif;
-  @apply text-black;
-  @apply font-helvetica;
 }
 
 @media (max-width: 640px) {
   html {
-    font-size: calc(100 * (100vw / 750));
+    font-size: calc(100 * (100vw / 390));
   }
 }
 
@@ -120,12 +115,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-.content {
-  @apply max-w-[1200px];
-  @apply w-full;
-  @apply px-[0.4rem];
-  @apply mx-auto;
-  @apply sm:w-[80%];
-  @apply sm:px-0;
 }

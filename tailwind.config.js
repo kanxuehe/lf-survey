@@ -1,21 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    // './node_modules/flowbite-react/**/*.js',
     './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
-      fontSize: {
-        12: '12px',
-      },
-      colors: {
-        'purple-site': '#8751BD',
-        'blue-site': '#2859B6',
-        'text-basic': '#353535',
-        'text-gray': '#e5e5e5',
+      backgroundImage: {
+        'orange-gradient': 'linear-gradient(90deg, #FF9609 0%, #FE4F00 100%)',
       },
       keyframes: {
         fade: {
