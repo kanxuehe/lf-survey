@@ -46,6 +46,10 @@ export default function RootLayout({
         <meta property="og:site_name" content="LFSurvey-洛锋科技" />
         <meta
           name="keywords"
+          content="问卷调查网站,海外问卷,问卷调查,国外问卷,问卷调查渠道查,问卷渠道查"
+        />
+        <meta
+          name="keywords"
           content="洛锋科技, 问卷调查网站开发, API对接服务 | LFSurvey-洛锋科技"
         />
         <link rel="icon" href="static/images/home/logo2.jpg" />
