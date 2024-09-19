@@ -40,7 +40,7 @@ export default function Detail() {
           </div>
           <div className="h-[0.12rem] flex items-center justify-between px-[0.18rem] mt-[0.08rem]">
             <span className="text-[0.1rem] text-[#999]">每人限购1份</span>
-            <span className="text-[0.1rem] text-[#999]">¥38</span>
+            <span className="text-[0.1rem] text-[#999] line-through">¥38</span>
           </div>
         </div>
       </div>
