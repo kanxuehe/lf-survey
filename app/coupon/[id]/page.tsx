@@ -22,7 +22,7 @@ export default function Detail() {
   return (
     <div className="relative min-h-screen bg-[#A43824] text-white">
       <Image
-        src={info.logoImageURL}
+        src={info.logoImageURL as string}
         alt=""
         width={393}
         height={242}
@@ -31,7 +31,7 @@ export default function Detail() {
       <div className="absolute top-[2.11rem] w-full rounded bg-[#A43824] p-[0.2rem] flex flex-col items-end">
         <div className="absolute left-[0.2rem] -top-[0.46rem] w-[0.92rem] h-[0.92rem] rounded-[50%] overflow-hidden p-[0.04rem] bg-white flex items-center justify-center">
           <Image
-            src={info.logoImageURL}
+            src={info.logoImageURL as string}
             alt=""
             width={86}
             height={86}

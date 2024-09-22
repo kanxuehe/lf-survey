@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // output: 'export',
-  output: 'html',
+  output: 'standalone',
   env: {},
   reactStrictMode: true,
   swcMinify: true,

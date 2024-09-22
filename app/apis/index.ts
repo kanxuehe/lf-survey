@@ -13,7 +13,7 @@ export interface ICoupon {
   couponTotalSales: null;
   couponYearlySales: null;
   discountRate: number;
-  imageList: [];
+  imageList: string[];
   logoImageURL: string;
   name: string;
   oriPrice: number;
@@ -37,13 +37,13 @@ export interface IShop {
   categoryList: [{ shopId: null; categoryId: number; categoryName: string }];
   environRating: number;
   favCount: null;
-  imageUrlList: null;
+  imageUrlList: string[];
   introduce: string;
   isFav: false;
   latitude: string;
   logoImageId: number;
   longitude: string;
-  managerList: null;
+  managerList: string[];
   name: string;
   nearestStation: string;
   openTime: number;
@@ -56,7 +56,7 @@ export interface IShop {
   shopTotalSales: null;
   shopYearlySales: null;
   telephone: string;
-  zipImageUrlList: null;
+  zipImageUrlList: string[];
 }
 
 export const getShopInfo = (params?: Record<string, any>) => {
