@@ -8,8 +8,10 @@
     "test": "yarn e2e",
     "e2e": "yarn playwright test",
     "build": "next build",
+    "build:standalone": "next build && npm run move",
     "start": "next start",
-    "lint": "next lint --fix"
+    "lint": "next lint --fix",
+    "move": "cp -r public .next/standalone && cp -r .next/static .next/standalone/.next"
   },
   "dependencies": {
     "next": "^13.4.9",
