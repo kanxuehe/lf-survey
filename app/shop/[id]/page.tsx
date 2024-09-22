@@ -21,7 +21,7 @@ export default function Home() {
     <div className="min-h-screen text-black pt-[0.4rem]">
       <section className="w-full px-[0.2rem] py-[0.1rem]">
         <Image
-          src="/images/logo3.jpg"
+          src={info.imageUrlList?.[0]}
           alt=""
           width={353}
           height={342}
