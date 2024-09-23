@@ -27,7 +27,12 @@ const Footer = () => {
               公众号：LFSurvey
             </p>
             <p className="text-lg font-light text-white">
-              浙ICP备2024076862号-2
+              <Link
+                href="https://beian.miit.gov.cn/"
+                className="hover:text-[#2859B6] underline"
+              >
+                浙ICP备2024076862号-2
+              </Link>
             </p>
           </div>
           <div className="pt-[80px] flex gap-x-6">

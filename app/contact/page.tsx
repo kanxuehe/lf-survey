@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Page() {
   return (
@@ -42,7 +43,12 @@ export default function Page() {
               邮箱：LFSurvey@163.com
             </p>
             <p className="flex items-center text-[0.2rem] leading-[0.2rem] mb-[0.34rem] sm:mb-0 sm:text-base">
-              浙ICP备2024076862号-2
+              <Link
+                href="https://beian.miit.gov.cn/"
+                className="hover:text-[#2859B6] underline"
+              >
+                浙ICP备2024076862号-2
+              </Link>
             </p>
           </div>
           <div className="flex gap-x-4 justify-around">
