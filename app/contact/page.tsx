@@ -31,7 +31,7 @@ export default function Page() {
               />
               地址：浙江省杭州市滨江区浙农科创园1幢808室
             </p>
-            <p className="flex items-center text-[0.2rem] leading-[0.2rem] mb-[0.34rem] sm:mb-0 sm:text-base">
+            <p className="flex items-center text-[0.2rem] leading-[0.2rem] mb-[0.14rem] sm:my-5 sm:text-base">
               <Image
                 src="static/images/contact/email.png"
                 alt=""
@@ -40,6 +40,9 @@ export default function Page() {
                 className="w-[0.2rem] h-[0.2rem] mr-[0.16rem] sm:hidden"
               />
               邮箱：LFSurvey@163.com
+            </p>
+            <p className="flex items-center text-[0.2rem] leading-[0.2rem] mb-[0.34rem] sm:mb-0 sm:text-base">
+              浙ICP备2024076862号-2
             </p>
           </div>
           <div className="flex gap-x-4 justify-around">
