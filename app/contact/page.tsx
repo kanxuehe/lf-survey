@@ -44,6 +44,7 @@ export default function Page() {
             </p>
             <p className="flex items-center text-[0.2rem] leading-[0.2rem] mb-[0.34rem] sm:mb-0 sm:text-base">
               <Link
+                target="_blank"
                 href="https://beian.miit.gov.cn/"
                 className="hover:text-[#2859B6] underline"
               >

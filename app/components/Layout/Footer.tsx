@@ -28,6 +28,7 @@ const Footer = () => {
             </p>
             <p className="text-lg font-light text-white">
               <Link
+                target="_blank"
                 href="https://beian.miit.gov.cn/"
                 className="hover:text-[#2859B6] underline"
               >
