@@ -38,12 +38,12 @@ export default function Detail() {
             className="min-w-[0.86rem] min-h-[0.86rem] rounded-[50%]"
           />
         </div>
-        <Rate value={4.5} />
+        <Rate value={info.rating} />
         <div className="mb-[0.08rem] mt-[0.16rem]">
           <Address color="white" address={info.address} />
         </div>
-        <p className="text-[0.12rem] leading-[0.1452rem] pt-[0.08rem] border-t-[0.01rem] border-[#E3E2E280]">
-          重庆连锁火锅店，用牛油和新鲜的食材做的绝品火锅，味道香辣 价格便宜
+        <p className="w-full text-[0.12rem] leading-[0.1452rem] pt-[0.08rem] border-t-[0.01rem] border-[#E3E2E280]">
+          {info.introduce}
         </p>
         <div className="w-full mt-[0.3rem]">
           <div className="w-full bg-white rounded overflow-hidden p-[0.14rem] pb-[0.45rem]">

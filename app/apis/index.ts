@@ -14,6 +14,8 @@ export interface ICoupon {
   couponYearlySales: null;
   discountRate: number;
   imageList: string[];
+  introduce: string;
+  rating: number;
   logoImageURL: string;
   name: string;
   oriPrice: number;
