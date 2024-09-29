@@ -13,7 +13,7 @@ export interface ICoupon {
   couponTotalSales: null;
   couponYearlySales: null;
   discountRate: number;
-  imageList: string[];
+  imageList: any[];
   introduce: string;
   rating: number;
   logoImageURL: string;
