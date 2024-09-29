@@ -17,6 +17,11 @@ export default function Detail() {
     const { code, data } = await getCouponInfo({ couponId: params.id });
     if (code === 200) {
       setInfo(data || {});
+      // setInfo({
+      //   ...data,
+      //   logoImageURL:
+      //     'https://pics2.baidu.com/feed/09fa513d269759ee8ac6622f21a0f1186c22df2e.jpeg@f_auto?token=0709df891a57cb497b7043c66021ad5b',
+      // });
     }
   }
   return (
@@ -48,7 +53,7 @@ export default function Detail() {
         <div className="w-full mt-[0.3rem]">
           <div className="w-full bg-white rounded overflow-hidden p-[0.14rem] pb-[0.45rem]">
             <Image
-              src="/images/food.jpg"
+              src={info?.imageList?.[0]?.imageUrl}
               alt=""
               width={393}
               height={242}
