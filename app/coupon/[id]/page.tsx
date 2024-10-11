@@ -43,7 +43,7 @@ export default function Detail() {
             className="min-w-[0.86rem] min-h-[0.86rem] rounded-[50%]"
           />
         </div>
-        <Rate value={info.rating} />
+        <Rate value={info.rating as number} />
         <div className="mb-[0.08rem] mt-[0.16rem]">
           <Address color="white" address={info.address} />
         </div>

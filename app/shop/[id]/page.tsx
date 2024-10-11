@@ -30,7 +30,7 @@ export default function Home() {
       </section>
       <section className="w-full px-[0.24rem] py-[0.16rem] flex flex-col gap-y-[0.08rem]">
         <div className="text-[0.24rem] leading-[0.3rem]">{info.name}</div>
-        <Rate value={info.rating} />
+        <Rate value={info.rating as number} />
         <p className="text-[0.12rem] leading-[0.1452rem] pb-[0.08rem] border-b-[0.01rem] border-[#E3E2E280]">
           {info.introduce}
         </p>
